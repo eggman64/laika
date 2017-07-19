@@ -62,7 +62,7 @@ func NewServer(conf ServerConfig) (*standard.Server, error) {
 
 	e.Get("/api/environments", environments.List, basicAuthMiddleware)
 
-	e.Static("/static", "public")
+	e.Static("/assets", "public/assets")
 	e.File("/*", "public/index.html")
 
 	server := standard.WithConfig(engine.Config{})
