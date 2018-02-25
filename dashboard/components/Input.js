@@ -19,6 +19,7 @@ export default function Input({
         {label}{required ? '*' : null}
       </label>
       <input
+	autoFocus
         id={name}
         className="lk-input__input"
         value={value}
